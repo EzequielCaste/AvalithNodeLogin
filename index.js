@@ -41,7 +41,7 @@ app.post('/login', async (req, res) => {
 app.get('/saludo', (req, res) => {
   if (req.body) {
     const {name} = jwt.decode(req.body.token);
-    res.status(200).send(`Hola ${name}!`);
+    res.status(200).send(`Buenos días ${name}!`);
   }
   res.status(400).send('Error de solicitud');
 });
